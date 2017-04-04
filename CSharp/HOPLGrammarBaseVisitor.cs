@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace HOPLGrammar {
+namespace HOPL.Grammar {
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using IToken = Antlr4.Runtime.IToken;
@@ -880,4 +880,4 @@ public partial class HOPLGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// <return>The visitor result.</return>
 	public virtual Result VisitTypeVal([NotNull] HOPLGrammarParser.TypeValContext context) { return VisitChildren(context); }
 }
-} // namespace HOPLGrammar
+} // namespace HOPL.Grammar
