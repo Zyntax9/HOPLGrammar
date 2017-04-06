@@ -239,7 +239,7 @@ SL_COMMENT	:	'//' (~[\r\n])*	-> channel(HIDDEN);
 ML_COMMENT	:	'/*' .*? '*/'	-> channel(HIDDEN);
 
 // Default rules
-ID		:	'_'?[a-zA-Z][_a-zA-Z0-9]*;
+ID		: '_'?([a-zA-Z]|'\u0100' .. '\u017E')([_a-zA-Z0-9]|'\u0100' .. '\u017E')*;
 WS		:	[ \t\n\r]+ -> channel(HIDDEN);
 TERM	:	';';
 ERR		:	.;
