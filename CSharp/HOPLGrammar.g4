@@ -91,7 +91,7 @@ await
 	;
 
 lock
-	:	LOCK_KW PARAN_OPEN ID PARAN_CLOSE body
+	:	LOCK_KW PARAN_OPEN identifier PARAN_CLOSE body
 	;
 
 if
