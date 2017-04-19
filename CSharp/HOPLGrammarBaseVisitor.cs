@@ -383,6 +383,18 @@ public partial class HOPLGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	public virtual Result VisitIfStat([NotNull] HOPLGrammarParser.IfStatContext context) { return VisitChildren(context); }
 
 	/// <summary>
+	/// Visit a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitLockStat([NotNull] HOPLGrammarParser.LockStatContext context) { return VisitChildren(context); }
+
+	/// <summary>
 	/// Visit a parse tree produced by the <c>decStat</c>
 	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
 	/// <para>
@@ -714,6 +726,17 @@ public partial class HOPLGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitAwait([NotNull] HOPLGrammarParser.AwaitContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitLock([NotNull] HOPLGrammarParser.LockContext context) { return VisitChildren(context); }
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="HOPLGrammarParser.if"/>.

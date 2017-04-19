@@ -409,6 +409,19 @@ public interface IHOPLGrammarListener : IParseTreeListener {
 	void ExitIfStat([NotNull] HOPLGrammarParser.IfStatContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLockStat([NotNull] HOPLGrammarParser.LockStatContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLockStat([NotNull] HOPLGrammarParser.LockStatContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by the <c>decStat</c>
 	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
 	/// </summary>
@@ -754,6 +767,17 @@ public interface IHOPLGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitAwait([NotNull] HOPLGrammarParser.AwaitContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLock([NotNull] HOPLGrammarParser.LockContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLock([NotNull] HOPLGrammarParser.LockContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="HOPLGrammarParser.if"/>.

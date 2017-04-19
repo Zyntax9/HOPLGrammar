@@ -265,6 +265,14 @@ public interface IHOPLGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitIfStat([NotNull] HOPLGrammarParser.IfStatContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLockStat([NotNull] HOPLGrammarParser.LockStatContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by the <c>decStat</c>
 	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
 	/// </summary>
@@ -480,6 +488,13 @@ public interface IHOPLGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitAwait([NotNull] HOPLGrammarParser.AwaitContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLock([NotNull] HOPLGrammarParser.LockContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="HOPLGrammarParser.if"/>.

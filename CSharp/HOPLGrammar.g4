@@ -60,6 +60,7 @@ stat
 	|	return TERM			#returnStat
 	|	expr TERM			#exprStat
 	|	unpack TERM			#unpackStat
+	|	lock				#lockStat
 	|	if elseIf* else?	#ifStat
 	|	while				#whileStat
 	|	for					#forStat
@@ -87,6 +88,10 @@ expr
 
 await
 	:	AWAIT_KW expr
+	;
+
+lock
+	:	LOCK_KW PARAN_OPEN ID PARAN_CLOSE body
 	;
 
 if
@@ -171,6 +176,7 @@ IMPORT_KW		:	'import';
 ALIAS_KW		:	'as';
 REQUIRED_KW		:	'required';
 CONSTANT_KW		:	'const';
+LOCK_KW			:	'lock';
 RETURN_KW		:	'return';
 AWAIT_KW		:	'await';
 TRIGGER_KW		:	'trigger';

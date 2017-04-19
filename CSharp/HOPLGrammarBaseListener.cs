@@ -471,6 +471,21 @@ public partial class HOPLGrammarBaseListener : IHOPLGrammarListener {
 	public virtual void ExitIfStat([NotNull] HOPLGrammarParser.IfStatContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLockStat([NotNull] HOPLGrammarParser.LockStatContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>lockStat</c>
+	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLockStat([NotNull] HOPLGrammarParser.LockStatContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by the <c>decStat</c>
 	/// labeled alternative in <see cref="HOPLGrammarParser.stat"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -874,6 +889,19 @@ public partial class HOPLGrammarBaseListener : IHOPLGrammarListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitAwait([NotNull] HOPLGrammarParser.AwaitContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLock([NotNull] HOPLGrammarParser.LockContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="HOPLGrammarParser.lock"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLock([NotNull] HOPLGrammarParser.LockContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="HOPLGrammarParser.if"/>.
