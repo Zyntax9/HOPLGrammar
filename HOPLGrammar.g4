@@ -47,7 +47,7 @@ functionDec
 	;
 
 handlerDec
-	:	HANDLER_KW expr PARAN_OPEN (typeName ID (COMMA typeName ID)*)? PARAN_CLOSE body
+	:	HANDLER_KW expr PARAN_OPEN args? PARAN_CLOSE body
 	;
 
 call
@@ -211,7 +211,7 @@ STRING		:	'string';
 INTEGER_VAL	:	'-'?[0-9]+;
 FLOAT_VAL	:	'-'?[0-9]+'.'[0-9]+;
 BOOLEAN_VAL :	'true'|'false';
-STRING_VAL  :	 '"' (~["\\] | '\\' (. | EOF))* '"';
+STRING_VAL  :	'"' (~["\\] | '\\' (. | EOF))* '"';
 
 // punctuation
 DOT		:	'.';
