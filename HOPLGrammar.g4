@@ -47,7 +47,7 @@ functionDec
 	;
 
 handlerDec
-	:	HANDLER_KW expr PARAN_OPEN args PARAN_CLOSE body
+	:	HANDLER_KW expr args body
 	;
 
 call
